@@ -1,7 +1,9 @@
 # HalPrivateDispatchTableHook
-Hooking syscall with HalPrivateDispatchTable->HalpCollectPmcCounters and Circular Kernel Context Logger ETW provider.
+Hooking syscall with nt!HalPrivateDispatchTable->HalpCollectPmcCounters and Circular Kernel Context Logger ETW provider.
 
 Hardcoded with Windows 23H2 but may be compatible with Windows 11 24H2, 25H2.
+
+nt!HalPrivateDispatchTable is not protected by PG and R/W memory page. But may be trigger PG in the future.
 
 ## Reference
 https://archie-osu.github.io/2025/04/11/vanguard-research.html
